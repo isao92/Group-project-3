@@ -1,0 +1,58 @@
+.navbar{
+    position: fixed;
+    width: 100%;
+    margin-bottom: 8px;
+    background-color: #C60000;
+    color: #ffc1c1;
+    z-index: 50000;
+}
+
+img{
+    height: 200%;
+    margin-left: 0;
+    position: absolute;
+    border-bottom: 10px;
+    border-right: 30px;
+    border-left: 30px;
+    border-style: double;
+    border-color: #C60000;
+}
+
+@media only screen and (max-width: 1000px) {
+    .collapse:not(.show){
+        display: flex;
+    }
+
+    .navbar-brand img{
+        width: 50%;
+        height: 300%;
+    }
+
+    .navbar-toggler{
+        display: none;
+    }
+
+    #nav-for-mobile{
+        float: left;
+        color: black;
+    }
+
+    .nav-item{
+        padding: 10px;
+        background-color: rgba(204, 214, 233, 0.575);
+        border-radius: 60%;
+    }
+
+    .navbar-nav{
+        background-color: rgba(240, 248, 255, 0.0);
+        display: flex;
+        flex-flow: row wrap;
+        list-style: none;
+        position: fixed;
+        padding-top: 80%;
+        padding-left: 0%;
+        font-size: .9rem;
+        z-index: 4000;
+    }
+
+  }
