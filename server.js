@@ -8,6 +8,7 @@ const morgan = require('morgan'); // used to see requests
 const app = express();
 const db = require('./models');
 const PORT = process.env.PORT || 3001;
+const MONGODB_URI = require("./config/keys")
 
 // Setting CORS so that any website can
 // Access our API
@@ -24,7 +25,7 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/ymmDB', {useNewUrlParser: true});
+mongoose.connect(MONGODB_URI || 'mongodb://localhost:27017/youmeDB', {useNewUrlParser: true});
 mongoose.set('useCreateIndex', true);
 
 // Init the express-jwt middleware
