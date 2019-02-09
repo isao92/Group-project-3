@@ -6,7 +6,7 @@ import BottomAppBar from "./components/Footer/Footer"
 
 class App extends Component {
   render() {
-    console.log(process.env.REACT_APP_SECRET_CODE);
+    console.log(process.env.SERVER_SECRET);
     return (
       <div className="App">
         <Home />
