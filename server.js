@@ -8,7 +8,7 @@ const morgan = require('morgan'); // used to see requests
 const app = express();
 const db = require('./models');
 const PORT = process.env.PORT || 3001;
-const MONGODB_URI = require("./config/keys")
+const MONGODB_URI = require("./config/keys").default
 
 // Setting CORS so that any website can
 // Access our API
