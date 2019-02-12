@@ -70,7 +70,7 @@ app.get('/api/user/:id', isAuthenticated, (req, res) => {
 
 
 // Serve up static assets (usually on heroku)
-if (process.env.SERVER_SECRET === "production") {
+if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
