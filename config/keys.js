@@ -1,1 +1,0 @@
-export default "mongodb://isao:horsetama&rindoarigato1@ds125555.mlab.com:25555/group-project-3";

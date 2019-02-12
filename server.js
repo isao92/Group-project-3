@@ -8,7 +8,6 @@ const morgan = require('morgan'); // used to see requests
 const app = express();
 const db = require('./models');
 const PORT = process.env.PORT || 3001;
-const MONGODB_URI = require("./config/keys").default
 
 // Setting CORS so that any website can
 // Access our API
@@ -32,7 +31,6 @@ mongoose.set('useCreateIndex', true);
 const isAuthenticated = exjwt({
   secret: process.env.SERVER_SECRET
 });
-
 
 // LOGIN ROUTE
 app.post('/api/login', (req, res) => {
@@ -72,7 +70,7 @@ app.get('/api/user/:id', isAuthenticated, (req, res) => {
 
 
 // Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
+if (process.env.SERVER_SECRET === "production") {
   app.use(express.static("client/build"));
 }
 
